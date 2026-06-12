@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViewTube - Video Platform Clone</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand-group">
+      <button class="icon-button" id="menuToggle" type="button" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="brand" href="#" aria-label="ViewTube home">
+        <span class="brand-mark">&#9658;</span>
+        <span>ViewTube</span>
+      </a>
+    </div>
+
+    <form class="search-form" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Search" aria-label="Search videos">
+      <button class="search-button" type="submit" aria-label="Search">
+        <span>Search</span>
+      </button>
+    </form>
+
+    <div class="top-actions">
+      <button class="icon-button round" id="themeToggle" type="button" aria-label="Toggle theme">T</button>
+      <button class="icon-button round" type="button" aria-label="Create">+</button>
+      <button class="icon-button round" type="button" aria-label="Notifications">N</button>
+      <button class="avatar-button" type="button" aria-label="Profile">S</button>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <nav aria-label="Main navigation">
+      <a class="nav-item active" href="#"><span>H</span>Home</a>
+      <a class="nav-item" href="#"><span>S</span>Shorts</a>
+      <a class="nav-item" href="#"><span>Sub</span>Subscriptions</a>
+      <a class="nav-item" href="#"><span>His</span>History</a>
+      <a class="nav-item" href="#"><span>Pl</span>Playlists</a>
+      <a class="nav-item" href="#"><span>Dl</span>Downloads</a>
+      <a class="nav-item" href="#"><span>Like</span>Liked videos</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <section class="chips" aria-label="Video categories">
+      <button class="chip active" type="button" data-category="All">All</button>
+      <button class="chip" type="button" data-category="Music">Music</button>
+      <button class="chip" type="button" data-category="Coding">Coding</button>
+      <button class="chip" type="button" data-category="Gaming">Gaming</button>
+      <button class="chip" type="button" data-category="Study">Study</button>
+      <button class="chip" type="button" data-category="Podcasts">Podcasts</button>
+      <button class="chip" type="button" data-category="Live">Live</button>
+      <button class="chip" type="button" data-category="Travel">Travel</button>
+    </section>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p>Featured live stream</p>
+        <h1>Build better focus habits while learning online</h1>
+        <button class="primary-action" type="button" data-featured-play>Watch now</button>
+      </div>
+    </section>
+
+    <section class="video-grid" id="videoGrid" aria-label="Videos"></section>
+  </main>
+
+  <div class="watch-modal hidden" id="watchModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="watch-panel">
+      <button class="close-button" type="button" data-close-modal aria-label="Close video">&times;</button>
+      <div class="player">
+        <div class="play-symbol">&#9658;</div>
+      </div>
+      <div class="watch-details">
+        <h2 id="modalTitle"></h2>
+        <p id="modalMeta"></p>
+      </div>
+    </article>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
